@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 
-const COMFY_BASE = process.env.REACT_APP_COMFY_URL || 'http://100.121.201.104:8188';
+const API_BASE = 'http://localhost:3002';
+const COMFY_BASE = `${API_BASE}/api/diffusion`;
 
 const STYLES = [
   { label: 'None', value: '' },

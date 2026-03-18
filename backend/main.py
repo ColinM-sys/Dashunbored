@@ -29,7 +29,7 @@ import connectors.unsplash  # noqa: F401
 import connectors.notion  # noqa: F401
 
 from routers import chat, knowledge, models, connectors as connectors_router, auth, analytics, settings as settings_router, homepage, websearch, calendar
-from routers import agent
+from routers import agent, diffusion
 
 app = FastAPI(title=settings.app_name)
 
@@ -52,6 +52,7 @@ app.include_router(homepage.router)
 app.include_router(websearch.router)
 app.include_router(calendar.router)
 app.include_router(agent.router)
+app.include_router(diffusion.router)
 
 
 @app.on_event("startup")
