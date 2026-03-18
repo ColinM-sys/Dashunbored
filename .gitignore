@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Build
+build/
+dist/
+
+# Environment
+.env
+.env.*
+
+# Data/DB
+data/admindashbored.db
+data/dashunbored.db
+data/chroma/
+data/uploads/
+data/images/
+
+# IDE
+.vscode/
+.idea/
+
+# Netlify
+.netlify/
+
+# OS
+.DS_Store
+Thumbs.db
