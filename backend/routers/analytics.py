@@ -8,6 +8,7 @@ router = APIRouter(prefix="/api/analytics", tags=["analytics"])
 
 
 @router.get("/overview")
+@router.get("/summary")
 def get_analytics(db: Session = Depends(get_db)):
     total_conversations = db.query(func.count(Conversation.id)).scalar() or 0
     total_messages = db.query(func.count(Message.id)).scalar() or 0
