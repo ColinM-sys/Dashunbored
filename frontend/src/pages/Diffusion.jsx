@@ -65,7 +65,7 @@ export default function Diffusion({ onGoChat, onGoAdmin, onGoCalendar, onGoStudi
 
       // Poll for completion
       let output = null;
-      for (let i = 0; i < 120; i++) {
+      for (let i = 0; i < 300; i++) {
         await new Promise(r => setTimeout(r, 2000));
         const histResp = await fetch(`${COMFY_BASE}/history/${prompt_id}`);
         const hist = await histResp.json();
