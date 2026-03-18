@@ -2,6 +2,8 @@
 
 A unified creative operating system for designers, photographers, and digital artists. Real-time collaboration, AI-driven augmentation, and local model support — all in one dashboard. Built to run on NVIDIA DGX Spark (GB10).
 
+**[Watch Demo Video](https://github.com/ColinM-sys/Dashunbored/releases/tag/v1.0)**
+
 ---
 
 ## Stack
