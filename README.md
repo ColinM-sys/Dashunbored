@@ -18,7 +18,6 @@ A unified creative operating system for designers, photographers, and digital ar
 | AI (Cloud) | Claude via Anthropic API |
 | AI (Local) | Ollama — qwen2.5:72b, llama3.2-vision:11b |
 | Image Gen | ComfyUI + Stable Diffusion (port 8188) |
-| Remote Access | Tailscale |
 
 ---
 
@@ -47,18 +46,7 @@ Open `http://localhost:3001` — login with `admin` / `admin`.
 
 ### Running on NVIDIA DGX Spark (GB10)
 
-**Connect to the Spark:**
-```bash
-ssh nvidia@Dell-39.local
-# password: nvidia
-```
-
-**Copy files:**
-```bash
-scp -r ./Dashunbored nvidia@Dell-39.local:~/Dashunbored
-```
-
-**On the Spark — install and run:**
+**On the DGX Spark — install and run:**
 ```bash
 # Install Ollama
 curl -fsSL https://ollama.com/install.sh | sh
@@ -81,7 +69,7 @@ npm install && npm start &
 python3 ~/ComfyUI/main.py --listen 0.0.0.0 --port 8188 --cpu &
 ```
 
-Access from any device on Tailscale: `http://100.121.201.104:3001`
+Access from any device on your network: `http://SPARK_IP:3001`
 
 ---
 
@@ -203,16 +191,6 @@ Upload any photo in the Agent page to get an AI score on how well it will perfor
 Select `llama3.2-vision:11b` as your model for best results.
 
 ---
-
-## Remote Access via Tailscale
-
-The Spark is accessible from any device on your Tailscale network:
-
-| Device | IP |
-|---|---|
-| DGX Spark (Dell-39) | `100.121.201.104` |
-
-Connect: `ssh nvidia@100.121.201.104` (password: `nvidia`)
 
 ---
 
