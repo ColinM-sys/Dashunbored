@@ -227,3 +227,10 @@ sudo mkdir -p /etc/systemd/system/ollama.service.d
 echo -e "[Service]\nEnvironment=OLLAMA_HOST=0.0.0.0" | sudo tee /etc/systemd/system/ollama.service.d/override.conf
 sudo systemctl daemon-reload && sudo systemctl restart ollama
 ```
+
+
+---
+
+## Author
+
+Built by **Colin McDonough** — [LinkedIn](https://www.linkedin.com/in/colinmcdonoughmarketing) · [GitHub](https://github.com/ColinM-sys)
